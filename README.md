@@ -56,10 +56,16 @@ This demonstrates the basic concept of protecting passwords using hashing.
 
 ## Testing
 
-### Vulnerable Login - Successful Login
+### secure Login - Successful Login
 
 Input:
 
-```text
-Username: admin
-Password: admin123
+- Username: admin
+- Password: admin123
+
+Output:
+
+Login Successfully
+username: admin
+
+
