@@ -1,10 +1,14 @@
+import hashlib
+
 stored_username = "admin"
-stored_password = "admin123"
+stored_password_hash = hashlib.sha256("admin123".encode()).hexdigest()
 
 username = input("Enter Username: ").strip()
 password = input("Enter Password: ").strip()
 
-if username == stored_username and password == stored_password:
+password_hash = hashlib.sha256(password.encode()).hexdigest()
+
+if username == stored_username and password_hash == stored_password_hash:
     print("Login Successful")
 else:
     print("Invalid Username or Password")
